@@ -15,9 +15,9 @@ The Docker image is built up from a  series of layers. Each layer represents an 
 ## What is a Container?
 A container is the running instantiation of a image. Without going into the details, a container is typically a lighter weight Virtual Machine. 
 
-There caveats about a container you must know.
+There are caveats about a container you should know.
 
-### Conatiners are Stateless
+#### Conatiners are Stateless
 Changes made to a container are lost once your container ceases to exist or you restart it. Data does not live on a container. When you close and restart a program, you get the same set of executable code. When you close and restart a image, you get the container for that image.
 
 In a later lab you will learn how to connect a container to a database and mount a folder from your host filesystem to help your container keep state.
