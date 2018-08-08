@@ -2,20 +2,19 @@
 The purpose of this lesson is to get familiar with Dockerfiles and running containers. There are a couple important terms to be familiar with before we start.
 
 ## What is a Dockerfile?
-A `Dockerfile` is a text document that contains all the commands a user could call on the command line to assemble an image. 
+A `Dockerfile` is a text document that contains all the commands a user calls to assemble an image. 
 
-This is similar to source code. This is a set of instructions Docker uses to build an image. The command you'll use later in the lab to build you image is `docker build`.
+This is the recipe to recreate an image. This set of instructions help you know what goes into your image. The command you'll use later in the lab to build you image from a dockerfile is `docker build`.
 
 ## What is a Docker Image?
-A Docker image is an inert, immutable file that's essentially a snapshot of a container. Just how a process is an instance of a program, a container is an instance of a image.
+A Docker image is an immutable file that's essentially a snapshot of a container. Just how a process is an instance of a program, a container is an instance of a image.
 
 The Docker image is built up from a  series of layers. Each layer represents an instruction in the image's Dockerfile. If you run the `docker history <image-id>` command you can see all the layers that build up your Docker image. Each layer is only a set of differences from the layer before it.
-
 
 ## What is a Container?
 A container is the running instantiation of a image. Without going into the details, a container is typically a lighter weight Virtual Machine. 
 
-There are caveats about a container you should know.
+### Container Caveats
 
 #### Conatiners are Stateless
 Changes made to a container are lost once your container ceases to exist or you restart it. Data does not live on a container. When you close and restart a program, you get the same set of executable code. When you close and restart a image, you get the container for that image.
