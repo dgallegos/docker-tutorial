@@ -19,7 +19,7 @@ Although there are other container platforms (Rkt, LXC), this tutorial focuses o
 
 ## Lessons
 
-### Software Prerequisites
+### Software Prerequisites (Must Install)
  - [Docker](https://docs.docker.com/install/)
 
 ### Lesson Links
