@@ -29,7 +29,7 @@ In a later lab you will learn how to connect a container to a database and mount
  - Examine Dockerfile
  - Build an Image
  - Run the Container
- - Verify Containers are Stateless
+ - Verify Images are Immutable
  - Modify a Dockerfile and Rebuild the Image
 
 ### Software Prerequisites (Must Install)
@@ -105,15 +105,24 @@ Hello Docker World!
 /opt/docker-tutorial # ls -al /
 ```
 
-Next we're going to test what it means for the docker container to be immutable.
+
+#### 5. Verify Images are Immutable
+Next we're going to test what it means for the Docker image/container to be immutable.
 
 ```bash
 # Delete lesson-1.sh file
 /opt/docker-tutorial # rm lesson-1.sh
 
+# Verify the file is removed
+/opt/docker-tutorial # ls -al
+
 # Exit Docker
 /opt/docker-tutorial # exit
+```
 
+We've exited Docker. Now, we're going to run the Docker Image and check if the file stays removed.
+
+```bash
 # Run docker again
 $ docker run -it docker-tutorial:lesson-1 
 
@@ -121,12 +130,11 @@ $ docker run -it docker-tutorial:lesson-1
 /opt/docker-tutorial # ls -al
 ```
 
-When you removed the file, left the container and restarted the container. Was the file back?
+After restarting the container, does the file exist?
 
 
-
-#### 5. Modify Dockerfile and Rebuild Container
-Uncomment the `RUN` command line in the Dockerfile.
+#### 6. Modify Dockerfile and Rebuild Container
+Uncomment the `RUN` command line in the [Dockerfile](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/Dockerfile).
 
 
 ```Dockerfile
@@ -152,7 +160,9 @@ $ docker build -f Dockerfile -t docker-tutorial:lesson-1 .
 Now you can see how the `RUN` command in a Dockerfile runs processes inside the container to build the image.
 
 ### Review
-That completes the lesson 1 Docker tutorial. You can continue learning more about Docker with [Lesson 2](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/lessons/lesson-2.md)
+This completes the lesson 1 Docker tutorial. You should have the basic understanding to read a Dockerfile and get it running.
+
+You can continue learning more about Docker with [Lesson 2 - Building a Web Server in Go](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/lessons/lesson-2.md)
 
 
 ## Reference
