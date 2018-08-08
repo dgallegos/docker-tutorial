@@ -47,23 +47,28 @@ In a later lab you will learn how to connect a container to a database and mount
  - CMD
 
 *FROM*
+
 The `FROM` command sets the base image. One of the features that helped Docker become the de facto container leader, is the ease of sharing and reusing images. 
 
 The FROM command checks if the image exists locally, if not, it attempts to pull the image from the [Docker Hub repository](https://docs.docker.com/docker-hub/). 
 
 *ENV*
+
 This `ENV` command sets the environment variable. The environment variable can be used during the building of the Docker image in the Dockerfile as well as once the Docker container is running.
 
 *WORKDIR*
+
 The `WORKDIR` instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile.
 
 *COPY*
+
 The COPY instruction copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>
 
 |	The Copy Feature supports a --chown parameter for Linux containers
 
 
 *CMD*
+
 The main purpose of a `CMD` is to provide defaults for an executing container.
 
 
@@ -78,9 +83,8 @@ You're going to build the docker image using the `docker build` command. You'll 
 
 
 
-3. Start Container
+4. Start Container
 You're going to start your container by running the docker image using the `docker run` command. You'll pass the `-it` options to make it an interactive terminal. The last parameter is the image name and tag that was created in the previous build command.
-
 
 
 ```
@@ -119,7 +123,7 @@ When you removed the file, left the container and restarted the container. Was t
 
 
 
-4. Modify Dockerfile and Rebuild Container
+5. Modify Dockerfile and Rebuild Container
 Uncomment the `RUN` command line in the Dockerfile.
 
 
@@ -130,6 +134,7 @@ Uncomment the `RUN` command line in the Dockerfile.
 ```
 
 *RUN*
+
 The `RUN` instruction will execute any commands in a new layer on top of the current image and commit the results. The resulting committed image will be used for the next step in the 
 
 Rebuild the application, start the container and view the new files.
@@ -145,6 +150,7 @@ Rebuild the application, start the container and view the new files.
 Now you can see how the `RUN` command in a Dockerfile runs processes inside the container to build the image.
 
 *Reference*
+
 [Dockerfile](https://docs.docker.com/engine/reference/builder/)
 [What is a Docker Image](https://stackoverflow.com/a/26960888/1122077)
 [What is a Docker Image](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/)
