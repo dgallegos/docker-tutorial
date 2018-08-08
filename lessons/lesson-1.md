@@ -24,12 +24,16 @@ In a later lab you will learn how to connect a container to a database and mount
 
 
 ## Lab
+
 ### Important Concepts 
  - Examine Dockerfile
  - Build an Image
  - Run the Container
  - Verify Containers are Stateless
  - Modify a Dockerfile and Rebuild the Image
+
+### Software Prerequisites (Must Install)
+ - [Docker](https://docs.docker.com/install/)
 
 ### Begin Lab
 
