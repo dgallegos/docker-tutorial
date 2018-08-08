@@ -1,5 +1,5 @@
 # Docker Tutorial with Go
-This project is an introduction to using docker. 
+This project is an introduction to using Docker. 
 
 
 ## What is a Container?
