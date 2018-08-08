@@ -1,23 +1,28 @@
 # Lesson 1 - Dockerfiles and Containers
 The purpose of this lesson is to get familiar with Dockerfiles and running containers. There are a couple important terms to be familiar with before we start.
 
+## Lifecycle Comparison
+To begin, let's take a quick glance at the states of a Docker container in comparison to an application.
+
+![alt text](https://github.com/dgallegos/docker-tutorial/blob/master/lessons/images/code-container-lifecycle.png "Code Container Lifecycle")
+
 ## What is a Dockerfile?
 A `Dockerfile` is a text document that contains all the commands a user calls to assemble an image. 
 
 This is the recipe to recreate an image. This set of instructions help you know what goes into your image. The command you'll use later in the lab to build you image from a dockerfile is `docker build`.
 
 ## What is a Docker Image?
-A Docker image is an immutable file that's essentially a snapshot of a container. Just how a process is an instance of a program, a container is an instance of a image.
+A Docker image is an immutable file that's essentially a snapshot of a container. Each command in the Dockerfile creates a new layer of the Docker Image.
 
-The Docker image is built up from a  series of layers. Each layer represents an instruction in the image's Dockerfile. If you run the `docker history <image-id>` command you can see all the layers that build up your Docker image. Each layer is only a set of differences from the layer before it.
+The Docker image is built up from a series of layers. Each layer represents an instruction in the image's Dockerfile. If you run the `docker history <image-id>` command you can see all the layers that build up your Docker image. Each layer is only a set of differences from the layer before it.
 
 ## What is a Container?
-A container is the running instantiation of a image. Without going into the details, a container is typically a lighter weight Virtual Machine. 
+A container is the running instantiation of a image. Without going into the details, a container is similar to a lighter weight Virtual Machine.
 
 ### Container Caveats
 
 #### Conatiners are Stateless
-Changes made to a container are lost once your container ceases to exist or you restart it. Data does not live on a container. When you close and restart a program, you get the same set of executable code. When you close and restart a image, you get the container for that image.
+Changes made to a container are lost once your container ceases to exist or you restart it. Data does not live on a container. When you close and restart the container, you container goes back to the state of the Docker Image.
 
 In a later lab you will learn how to connect a container to a database and mount a folder from your host filesystem to help your container keep state.
 
