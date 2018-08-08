@@ -38,8 +38,8 @@ In a later lab you will learn how to connect a container to a database and mount
 ### Begin Lab
 
 #### 1. Switch to git lesson-1 branch
-```
-	$ git checkout -b lessons/lesson-1
+```bash
+$ git checkout lessons/lesson-1
 ```
 
 #### 2. Examine the Dockerfile
@@ -76,47 +76,49 @@ The main purpose of a `CMD` is to provide defaults for an executing container.
 You're going to build the docker image using the `docker build` command. You'll pass the option `-f Dockerfile` to use the file named "Dockerfile" in the root directory. The option `-t docker-tutorial:lesson-1` will setup the name of the image as "docker-tutorial" with a version of "lesson-1". The Dockerfile copies files from the host, we set the path as `.` (period) to say, this directory is the path to those files.
 
 
-```
-	$ docker build -f Dockerfile -t docker-tutorial:lesson-1 .
+```bash
+# Build the Docker Image
+$ docker build -f Dockerfile -t docker-tutorial:lesson-1 .
 
+# View the history of how the image was created
+$ docker history docker-tutorial:lesson-1
 ```
-
 
 
 #### 4. Start Container
 You're going to start your container by running the docker image using the `docker run` command. You'll pass the `-it` options to make it an interactive terminal. The last parameter is the image name and tag that was created in the previous build command.
 
 
-```
-	$ docker run -it docker-tutorial:lesson-1 
+```bash
+# Run the Docker Image 
+$ docker run -it docker-tutorial:lesson-1 
 
-
-	# Run the lesson-1.sh script
-	/opt/docker-tutorial # ./lesson-1.sh 
+# Run the lesson-1.sh script
+/opt/docker-tutorial # ./lesson-1.sh 
 Hello Docker World!
 
-	# Run ps aux to see running commands
-	/opt/docker-tutorial # ps aux
+# Run ps aux to see running commands
+/opt/docker-tutorial # ps aux
 
-	# Navigate/List the directories to see that it's, it's own file system
-	/opt/docker-tutorial # ls -al /bin
-	/opt/docker-tutorial # ls -al /
+# Navigate/List the directories to see that it's, it's own file system
+/opt/docker-tutorial # ls -al /bin
+/opt/docker-tutorial # ls -al /
 ```
 
 Next we're going to test what it means for the docker container to be immutable.
 
-```
-	# Delete lesson-1.sh file
-	/opt/docker-tutorial # rm lesson-1.sh
+```bash
+# Delete lesson-1.sh file
+/opt/docker-tutorial # rm lesson-1.sh
 
-	# Exit Docker
-	/opt/docker-tutorial # exit
+# Exit Docker
+/opt/docker-tutorial # exit
 
-	# Run docker again
-	$ docker run -it docker-tutorial:lesson-1 
+# Run docker again
+$ docker run -it docker-tutorial:lesson-1 
 
-	# List the working directory contents
-	/opt/docker-tutorial # ls -al
+# List the working directory contents
+/opt/docker-tutorial # ls -al
 ```
 
 When you removed the file, left the container and restarted the container. Was the file back?
@@ -127,7 +129,7 @@ When you removed the file, left the container and restarted the container. Was t
 Uncomment the `RUN` command line in the Dockerfile.
 
 
-```
+```Dockerfile
 	# Run Command
 	RUN ${APP_ROOT}/create-files.sh
 
@@ -139,11 +141,12 @@ The `RUN` instruction will execute any commands in a new layer on top of the cur
 Rebuild the application, start the container and view the new files.
 
 
-```
-	$ docker build -f Dockerfile -t docker-tutorial:lesson-1 .
+```bash
+# Build the Image using the same tag as before
+$ docker build -f Dockerfile -t docker-tutorial:lesson-1 .
 
-	# List working directory files
-	/opt/docker-tutorial # ls -al
+# List working directory files
+/opt/docker-tutorial # ls -al
 ```
 
 Now you can see how the `RUN` command in a Dockerfile runs processes inside the container to build the image.
@@ -154,6 +157,8 @@ That completes the lesson 1 Docker tutorial. You can continue learning more abou
 
 ## Reference
 [Dockerfile](https://docs.docker.com/engine/reference/builder/)
+
 [What is a Docker Image](https://stackoverflow.com/a/26960888/1122077)
+
 [What is a Docker Image](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/)
 
