@@ -12,7 +12,7 @@ WORKDIR ${APP_ROOT}
 COPY src ${APP_ROOT}
 
 # Run Command
-RUN ${APP_ROOT}/create-files.sh
+# RUN ${APP_ROOT}/create-files.sh
 
 # Run bash command at startup
 CMD ["/bin/sh"]
