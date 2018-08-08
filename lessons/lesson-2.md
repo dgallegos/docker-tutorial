@@ -11,11 +11,11 @@ The purpose of this is to build a small webserver in Go and allow you to learn a
 
 1. Switch to git lesson-1 tag
 ```
-	$ git checkout -b lessons/lesson-1
+	$ git checkout lessons/lesson-2
 ```
 
 2. Examine the Dockerfile
-	
+
 	1. What is the base image?
 	2. What is the application path or working directory?
 	3. What are the software dependencies?
