@@ -12,9 +12,9 @@ A `Dockerfile` is a text document that contains all the commands a user calls to
 This is the recipe to recreate an image. This set of instructions help you know what goes into your image. The command you'll use later in the lab to build you image from a dockerfile is `docker build`.
 
 ## What is a Docker Image?
-A Docker image is an immutable file that's essentially a snapshot of a container. Each command in the Dockerfile creates a new layer of the Docker Image.
+A Docker image is the built-up filesystem created by a Dockerfile. Each command in the Dockerfile is like a git commit that adds a layer to the image. 
 
-The Docker image is built up from a series of layers. Each layer represents an instruction in the image's Dockerfile. If you run the `docker history <image-id>` command you can see all the layers that build up your Docker image. Each layer is only a set of differences from the layer before it.
+If you run the `docker history <image-id>` command you can see all the layers that build up your Docker image. Each layer is only a set of differences from the layer before it. Commands can copy files, set ENV variables, execute commands, and do many other actions.
 
 ## What is a Container?
 A container is the running instantiation of a image. Without going into the details, a container is similar to a lighter weight Virtual Machine.
