@@ -23,9 +23,9 @@ Although there are other container platforms (Rkt, LXC), this tutorial focuses o
  - [Docker](https://docs.docker.com/install/)
 
 ### Lesson Links
- - [Lesson 1 - Dockerfiles and Containers](https://github.com/dgallegos/docker-tutorial/blob/master/lessons/lesson-1.md)
- - [Lesson 2 - Building a Web Server in Go
- - Lesson 3 - Docker Compose
+ - [Lesson 1 - Dockerfiles and Containers](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/lessons/lesson-1.md)
+ - [Lesson 2 - Simple Workflow: Mounting Folders and Exposing Ports](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-2/lessons/lesson-2.md)
+ - Lesson 3 - Docker Compose: A Full Workflow 
 
 
 *References*
