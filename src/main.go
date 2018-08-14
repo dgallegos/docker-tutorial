@@ -10,7 +10,7 @@ func main() {
 	router := NewRouter()
 
 	// Listen and serve on 0.0.0.0:8080
-	router.Run()
+	router.Run(":8080")
 }
 
 func NewRouter() *gin.Engine {
