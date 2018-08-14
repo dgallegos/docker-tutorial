@@ -166,7 +166,7 @@ Now you can see how the `RUN` command in a Dockerfile runs processes inside the 
 ### Review
 This completes the lesson 1 Docker tutorial. You should have the basic understanding to read a Dockerfile and get it running.
 
-You can continue learning more about Docker with [Lesson 2 - Building a Web Server in Go](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/lessons/lesson-2.md)
+You can continue learning more about Docker with [Lesson 2 - Simple Workflow: Mounting Folders and Exposing Ports](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-2/lessons/lesson-2.md)
 
 
 ## Reference
