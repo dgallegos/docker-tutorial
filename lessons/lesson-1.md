@@ -138,10 +138,11 @@ After restarting the container, does the file exist?
 
 
 #### 6. Modify Dockerfile and Rebuild Container
-Uncomment the `RUN` command line in the [Dockerfile](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/Dockerfile).
+Let's modifyc the current Dockerfile. Uncomment the `RUN` command line in the [Dockerfile](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/Dockerfile), so it looks like below.
 
 
-```Dockerfile
+*[Dockerfile](https://github.com/dgallegos/docker-tutorial/blob/lessons/lesson-1/Dockerfile#L29)*
+```
 	# Run Command
 	RUN ${APP_ROOT}/create-files.sh
 ```
