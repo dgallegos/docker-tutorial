@@ -144,7 +144,6 @@ Uncomment the `RUN` command line in the [Dockerfile](https://github.com/dgallego
 ```Dockerfile
 	# Run Command
 	RUN ${APP_ROOT}/create-files.sh
-
 ```
 
 ###### RUN
@@ -156,6 +155,9 @@ Rebuild the application, start the container and view the new files.
 ```bash
 # Build the Image using the same tag as before
 $ docker build -f Dockerfile -t docker-tutorial:lesson-1 .
+
+# Run the Docker Image 
+$ docker run -it docker-tutorial:lesson-1 
 
 # List working directory files
 /opt/docker-tutorial # ls -al
