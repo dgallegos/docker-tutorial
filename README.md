@@ -14,7 +14,7 @@ Docker is a tool designed to make it easier to create, deploy, and run applicati
 
 Although there are other container platforms (Rkt, LXC), this tutorial focuses on the popular platform Docker.
 
-[More Information](https://opensource.com/resources/what-docker)
+[More Information](https://github.com/dgallegos/docker-tutorial/blob/master/lessons/docker.md)
 
 
 ## Lessons
