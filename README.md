@@ -7,7 +7,7 @@ A container image is a lightweight, stand-alone, executable package of a piece o
 
 Containers isolate software from its surroundings, for example differences between development and staging environments and help reduce conflicts between teams running different software on the same infrastructure.
 
-[More Information](https://www.docker.com/what-container)
+[More Information](https://github.com/dgallegos/docker-tutorial/blob/master/lessons/containers.md)
 
 ## What is Docker?
 Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. 
