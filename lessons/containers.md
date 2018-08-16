@@ -7,6 +7,7 @@
 
 > *but a vital part of it.”*
 
+
 This is one of the fundamentals ideas about what makes containers great. The purpose of Containers is to turn infrastructure to code.
 
 *Container Benefits*
@@ -16,7 +17,7 @@ This is one of the fundamentals ideas about what makes containers great. The pur
  - Operational Efficiency - Resources can be better managed
 
 ### Infrastructure is Version Controlled
-When we build our containers, we will explicitly define the "distro" used, the software dependencies (yum/apt-get), include any configuration files necessary, and include our application. Your application will be rebuilt with all the dependencies it needs and only the dependencies it needs. 
+When we build our containers, we will explicitly define the "distro" used (if any is required), the software dependencies (yum/apt-get), include any configuration files necessary, and include our application. Your application will be rebuilt with all the dependencies it needs and only the dependencies it needs. 
 
 This file of instructions can be version controlled, along with the final image that's created.
 
@@ -34,13 +35,18 @@ With containers, you can specify the exact amount of memory, disk space, and CPU
 ### Virtualization vs Container
 ![alt text](https://github.com/dgallegos/docker-tutorial/blob/master/lessons/images/container-vs-vm.png "Container vs VM")
 
+ - VMs require Operating System, Dependencies, and Application
+ - Containers only require Dependencies, and Applications. OS not required
+
 ### Container Benefits
  - Less Resource Overhead
- - Very quick boot times, allow scaling more easily
+ - Very quick boot times, which allow scaling more easily
  - Simpler Application Deployment
  - Explicitly Maintain System Configuration
 
-## How are containers used?
+## What's Docker?
+Let's look at what Docker is next, [What's Docker?](https://github.com/dgallegos/docker-tutorial/blob/master/lessons/docker.md)
+
 
 # References
 -----
