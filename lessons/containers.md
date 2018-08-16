@@ -1,7 +1,11 @@
 # Containers
 
 ## Containers and DevOps
-	|“DevOps is about recognizing that the backing infrastructure is not separate from your application, but a vital part of it.”
+> *“DevOps is about recognizing*
+
+> *that the backing infrastructure is not separate from your application,*
+
+> *but a vital part of it.”*
 
 This is one of the fundamentals ideas about what makes containers great. The purpose of Containers is to turn infrastructure to code.
 
