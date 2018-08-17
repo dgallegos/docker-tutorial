@@ -33,7 +33,7 @@ This file of instructions can be version controlled, along with the final image 
 ### Environment Consistency
 Containers encapsulate all the necessary application files and software dependencies and serve as a building block that can be deployed on any compute resource regardless of software, operating system, or hardware configurations. You can run the same container on your Ubuntu laptop and on your Red Hat Enterprise Linux production servers. 
 
- Whatever you package as a container locally will deploy and run the same way whether in testing or production. This is beneficial because you can deploy an application reliably and consistently regardless of environment. This helps you avoid manually configuring each serverr.
+ Whatever you package as a container locally will deploy and run the same way whether in testing or production. This is beneficial because you can deploy an application reliably and consistently regardless of environment. This helps you avoid manually configuring each server.
 
  - Has anyone ever asked the question what version of the JRE is running on a server?
  - Has anyone ever had a situation where something was installed on the production server that is causing the application to run differently in another environment?
