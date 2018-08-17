@@ -1,18 +1,25 @@
 # Docker
 > "Build, Ship, and Run Any App, Anywhere"
 
-Docker is a software platform that performs "containerization". It is the `de facto` standard for container building and runtime.
+Docker is a software platform that performs "containerization". It is the de facto standard for container building and runtime.
 
 In fact [Open Container Initiative (OCI)](https://en.wikipedia.org/wiki/Open_Container_Initiative) spec has largely been driven and lead by Docker.
 
+Containers are an idea created by Linux, but setting up a container requires doing a lot of low level manual commmands. Docker is a pretty User Interface that made containerization easy to use.
+
 ## Docker Benefits
-Docker didn't create containers, and I won't go into the history, but this is what they've done right.
+Docker didn't create containers, but they've done things right to bring it to the masses.
 
 ### Shared Images are a First Class Concept
 Docker easily allows you to share images through Docker registries, then build off existing images with Dockerfiles.
 
+ - They created a public repository where they've got premade software images available. They also allow people to upload their own images or use private repositories.
+ - They allow users to easily build on top of existing images. So once you get a public image, you can add whatever you need to fit your needs.
+
 ### Works Well Out of the Box
 Docker handles networks, file system momunts, composition, and orchestration.
+
+What the above means is, not only does Docker handle simple use-cases during development, you can test networked containers and scaling containers.
 
 ### Dockerfiles
 Dockeriles are easy to read, easy to write, with a lower barrier to entry adoption is wide.
